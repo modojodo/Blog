@@ -282,8 +282,8 @@ app.get('/logout', function (req, res) {
     req.logout();
     res.send({loggedout: true});
 });
-
-app.listen(3030);
+var port = process.env.PORT || 3001;
+app.listen(port);;
 
 
 // Simple route middleware to ensure user is authenticated.
