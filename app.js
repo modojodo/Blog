@@ -6,7 +6,7 @@ var app = express();
 var bodyParser = require('body-parser');
 var cookieParser = require('cookie-parser');
 var session = require('express-session');
-var db = require('monk')('localhost:27017/nodetest1');
+var db = require('monk')('umer:umer12@ds041140.mongolab.com:41140/blog');
 
 //var flash    = require('connect-flash');
 
@@ -283,7 +283,8 @@ app.get('/logout', function (req, res) {
     res.send({loggedout: true});
 });
 var port = process.env.PORT || 3001;
-app.listen(port);;
+app.listen(port);
+;
 
 
 // Simple route middleware to ensure user is authenticated.

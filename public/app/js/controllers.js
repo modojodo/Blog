@@ -13,7 +13,7 @@ angular.module('app.controllers', []).run(function ($rootScope) {
 }).controller('loginController', function ($rootScope, $scope, $location, $http) {
 
     $scope.submit = function () {
-        $http.post('http://localhost:3030/login', $scope.formData).success(function (data) {
+        $http.post('/login', $scope.formData).success(function (data) {
             $scope.loginWarn = false;
             if (data.logged == true) {
                 $rootScope.loggedIn = true;
@@ -27,7 +27,7 @@ angular.module('app.controllers', []).run(function ($rootScope) {
 }).controller('registerController', function ($rootScope, $scope, $location, $http) {
     $scope.registered = false
     $scope.register = function () {
-        $http.post('http://localhost:3030/register', $scope.signup).success(function (data) {
+        $http.post('/register', $scope.signup).success(function (data) {
 
             if (data.registered == true) {
                 $scope.registered = data.registered;
@@ -48,7 +48,7 @@ angular.module('app.controllers', []).run(function ($rootScope) {
     //$scope.postData.title = '';
     //$scope.postData.blogpost = '';
     $scope.submitPost = function () {
-        $http.post('http://localhost:3030/write', $scope.postData).success(function (data) {
+        $http.post('/write', $scope.postData).success(function (data) {
             $scope.postData.title = '';
             $scope.postData.blogpost = '';
             $scope.loginWarn = false;
@@ -65,7 +65,7 @@ angular.module('app.controllers', []).run(function ($rootScope) {
 
     $scope.logout = function () {
 
-        $http.get('http://localhost:3030/logout').success(function (data) {
+        $http.get('/logout').success(function (data) {
             console.log(data);
             if (data.loggedout == true) {
                 $rootScope.loggedIn = false;
@@ -79,7 +79,7 @@ angular.module('app.controllers', []).run(function ($rootScope) {
     $scope.records = false;
     $scope.blogPosts = {};
     var getPosts = function () {
-        $http.get('http://localhost:3030/getpost').success(function (data) {
+        $http.get('/getpost').success(function (data) {
             if (data.records == false) {
                 $scope.records = false;
             }
