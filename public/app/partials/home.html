@@ -1,0 +1,108 @@
+<!-- Page Content -->
+<div class="container" ng-controller="postController">
+
+	<div class="row">
+
+		<!-- Blog Entries Column -->
+		<div class="col-md-8">
+			<div class="alert alert-info" role="alert" ng-show="records==false">There are no posts to show.</div>
+		</div>
+		<div class="col-md-8" ng-show="records==true" ng-repeat="post in blogPosts">
+
+			<!-- First Blog Post -->
+			<h2>
+				{{post.title}}
+			</h2>
+
+			<p class="lead">
+				by <a href="#">{{post.user}}</a>
+			</p>
+
+			<!--<p><span class="glyphicon glyphicon-time"></span> Posted on August 28, 2013 at 10:00 PM</p>-->
+			<hr>
+			<p>{{post.post}}</p>
+			<hr>
+
+		</div>
+
+		<!-- Blog Sidebar Widgets Column -->
+		<!--<div class="col-md-4">-->
+
+			<!--&lt;!&ndash; Blog Search Well &ndash;&gt;-->
+			<!--<div class="well">-->
+				<!--<h4>Blog Search</h4>-->
+
+				<!--<div class="input-group">-->
+					<!--<input type="text" class="form-control">-->
+                        <!--<span class="input-group-btn">-->
+                            <!--<button class="btn btn-default" type="button">-->
+								<!--<span class="glyphicon glyphicon-search"></span>-->
+							<!--</button>-->
+                        <!--</span>-->
+				<!--</div>-->
+				<!--&lt;!&ndash; /.input-group &ndash;&gt;-->
+			<!--</div>-->
+
+			<!--&lt;!&ndash;&lt;!&ndash; Blog Categories Well &ndash;&gt;&ndash;&gt;-->
+			<!--&lt;!&ndash;<div class="well">&ndash;&gt;-->
+				<!--&lt;!&ndash;<h4>Blog Categories</h4>&ndash;&gt;-->
+
+				<!--&lt;!&ndash;<div class="row">&ndash;&gt;-->
+					<!--&lt;!&ndash;<div class="col-lg-6">&ndash;&gt;-->
+						<!--&lt;!&ndash;<ul class="list-unstyled">&ndash;&gt;-->
+							<!--&lt;!&ndash;<li><a href="#">Category Name</a>&ndash;&gt;-->
+							<!--&lt;!&ndash;</li>&ndash;&gt;-->
+							<!--&lt;!&ndash;<li><a href="#">Category Name</a>&ndash;&gt;-->
+							<!--&lt;!&ndash;</li>&ndash;&gt;-->
+							<!--&lt;!&ndash;<li><a href="#">Category Name</a>&ndash;&gt;-->
+							<!--&lt;!&ndash;</li>&ndash;&gt;-->
+							<!--&lt;!&ndash;<li><a href="#">Category Name</a>&ndash;&gt;-->
+							<!--&lt;!&ndash;</li>&ndash;&gt;-->
+						<!--&lt;!&ndash;</ul>&ndash;&gt;-->
+					<!--&lt;!&ndash;</div>&ndash;&gt;-->
+					<!--&lt;!&ndash;&lt;!&ndash; /.col-lg-6 &ndash;&gt;&ndash;&gt;-->
+					<!--&lt;!&ndash;<div class="col-lg-6">&ndash;&gt;-->
+						<!--&lt;!&ndash;<ul class="list-unstyled">&ndash;&gt;-->
+							<!--&lt;!&ndash;<li><a href="#">Category Name</a>&ndash;&gt;-->
+							<!--&lt;!&ndash;</li>&ndash;&gt;-->
+							<!--&lt;!&ndash;<li><a href="#">Category Name</a>&ndash;&gt;-->
+							<!--&lt;!&ndash;</li>&ndash;&gt;-->
+							<!--&lt;!&ndash;<li><a href="#">Category Name</a>&ndash;&gt;-->
+							<!--&lt;!&ndash;</li>&ndash;&gt;-->
+							<!--&lt;!&ndash;<li><a href="#">Category Name</a>&ndash;&gt;-->
+							<!--&lt;!&ndash;</li>&ndash;&gt;-->
+						<!--&lt;!&ndash;</ul>&ndash;&gt;-->
+					<!--&lt;!&ndash;</div>&ndash;&gt;-->
+					<!--&lt;!&ndash;&lt;!&ndash; /.col-lg-6 &ndash;&gt;&ndash;&gt;-->
+				<!--&lt;!&ndash;</div>&ndash;&gt;-->
+				<!--&lt;!&ndash;&lt;!&ndash; /.row &ndash;&gt;&ndash;&gt;-->
+			<!--&lt;!&ndash;</div>&ndash;&gt;-->
+
+			<!--&lt;!&ndash;&lt;!&ndash; Side Widget Well &ndash;&gt;&ndash;&gt;-->
+			<!--&lt;!&ndash;<div class="well">&ndash;&gt;-->
+				<!--&lt;!&ndash;<h4>Side Widget Well</h4>&ndash;&gt;-->
+
+				<!--&lt;!&ndash;<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore, perspiciatis adipisci accusamus&ndash;&gt;-->
+					<!--&lt;!&ndash;laudantium odit aliquam repellat tempore quos aspernatur vero.</p>&ndash;&gt;-->
+			<!--&lt;!&ndash;</div>&ndash;&gt;-->
+
+		<!--</div>-->
+
+	</div>
+	<!-- /.row -->
+
+	<hr>
+
+	<!-- Footer -->
+	<footer>
+		<div class="row">
+			<div class="col-lg-12">
+				<p>Copyright &copy; Bloggy 2015</p>
+			</div>
+			<!-- /.col-lg-12 -->
+		</div>
+		<!-- /.row -->
+	</footer>
+
+</div>
+<!-- /.container -->
